@@ -1,5 +1,7 @@
 {
   "name": "aleup",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }

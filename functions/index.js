@@ -9,7 +9,7 @@ const uuid = require('uuid/v4');
 const { Storage } = require('@google-cloud/storage');
 
 const storage = new Storage({
-  projectId: 'aleup-b6b07'
+  projectId: 'booking-places-dfff6'
 });
 
 exports.storeImage = functions.https.onRequest((req, res) => {
@@ -40,7 +40,7 @@ exports.storeImage = functions.https.onRequest((req, res) => {
 
       console.log(uploadData.type);
       return storage
-        .bucket('aleup-b6b07.appspot.com')
+        .bucket('booking-places-dfff6.appspot.com')
         .upload(uploadData.filePath, {
           uploadType: 'media',
           destination: imagePath,
@@ -56,7 +56,7 @@ exports.storeImage = functions.https.onRequest((req, res) => {
           return res.status(201).json({
             imageUrl:
               'https://firebasestorage.googleapis.com/v0/b/' +
-              storage.bucket('aleup-b6b07.appspot.com').name +
+              storage.bucket('booking-places-dfff6.appspot.com').name +
               '/o/' +
               encodeURIComponent(imagePath) +
               '?alt=media&token=' +

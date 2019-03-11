@@ -1,0 +1,91 @@
+<!-- <ion-item>
+  <ion-thumbnail slot="start">
+    <ion-img [src]="offer.imageUrl"></ion-img>
+  </ion-thumbnail>
+  <ion-label>
+    <h1>{{ offer.title }}</h1>
+    <div class="offer-details">
+      <ion-icon name="calendar" color="primary"></ion-icon>
+      <ion-text color="tertiary" class="space-left">{{
+        offer.availableFrom | date
+      }}</ion-text>
+      <span class="space-left">to</span>
+      <ion-icon name="calendar" class="space-left" color="primary"></ion-icon>
+      <ion-text color="tertiary" class="space-left">{{
+        offer.availableTo | date
+      }}</ion-text>
+    </div>
+  </ion-label>
+</ion-item> -->
+<ion-item>
+    <ion-card>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="9">
+            <ion-card-header text-center>
+              <ion-card-title>{{ offer.title }}</ion-card-title>
+              <ion-card-subtitle>Price: <span style="font-size: 18px; color:red;">{{ offer.price | currency }}</span></ion-card-subtitle>
+            </ion-card-header>
+          </ion-col>
+          <ion-col size="3">
+            <div class="discount"><p>-{{ offer.discount }}%</p></div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+        
+        <ion-img [src]="offer.imageUrl"></ion-img>
+        <ion-card-content>
+          <!-- <p>Description: {{ offer.description }}</p> -->
+          <!-- <p>Valid: {{offer.availableFrom | date}} - {{ offer.availableTo | date}}</p> -->
+          <!-- <p>Valid: {{ offer.availableTo | date}}</p>
+          <p>{{offer.location.address}}</p> -->
+          <p>{{ offer.market }}</p>
+          <ion-grid>
+              <ion-row>
+                <ion-col text-center>
+                  <ion-button fill="clear" shape="round" (click)="addFavorite(offer.id)">
+                    <div *ngIf="!isFav">
+                      <ion-icon name="heart-empty" slot="icon-only" color="danger" size="large"></ion-icon>
+                    </div>
+                    <div *ngIf="isFav">
+                      <ion-icon name="heart" slot="icon-only" color="danger" size="large"></ion-icon>
+                    </div>
+                  </ion-button>
+                </ion-col>
+                <ion-col text-center>
+                    <ion-button fill="clear" shape="round"><ion-icon name="chatboxes" slot="icon-only" color="medium" size="large"></ion-icon></ion-button>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          <ion-grid *ngIf="isMore">
+            <ion-row>
+              <ion-col>
+                  <p>Description: {{ offer.description }}</p>
+                  <p><span *ngIf="dateFrom !== '01/01/1970'">From: {{ dateFrom }} </span><span *ngIf="dateTo !== '01/01/1970'">- To: {{ dateTo }}</span></p>
+                  <p>Address: {{ offer.location.address }}</p>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <ion-img [src]="offer.location.staticMapImageUrl"></ion-img>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <p>Latitude: {{ offer.location.lat }}</p>
+              </ion-col>
+              <ion-col>
+                <p>Longtitude: {{ offer.location.lng }}</p>
+              </ion-col>
+            </ion-row>
+          </ion-grid> 
+        </ion-card-content>
+        <div text-center>
+          <!-- <ion-button fill="clear" color="primary" [routerLink]="['/','places','tabs','discover',offer.id]"> -->
+          <ion-button fill="clear" color="primary" (click)="onSwitchMoreLess()">
+            {{ !isMore ? 'More' : 'Less'}}
+          </ion-button>
+        </div>
+
+      </ion-card>
+</ion-item>

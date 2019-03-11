@@ -4,7 +4,9 @@
 
 export const environment = {
   production: false,
-  firebaseAPIKey: 'AIzaSyDwMZBDszf1AZSb45Qfy-Q8d7BfjJiFal8'
+  fireBaseUrl: 'https://booking-places-dfff6.firebaseio.com/',
+  googleMapsAPIKey: 'AIzaSyBtWWWm3DouBtyNRzmryt9h3zmDosB_a4c',
+  firebaseAPIKey: 'AIzaSyBwTzyYItZ9Gb5vlHdIOqpoDeNVDc739TM'
 };
 
 /*
