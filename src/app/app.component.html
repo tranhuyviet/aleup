@@ -1,3 +1,23 @@
 <ion-app>
   <ion-router-outlet></ion-router-outlet>
+  <ion-tabs>
+      <ion-tab-bar slot="buttom">
+        <ion-tab-button tab='home'>
+          <ion-label>Home</ion-label>
+          <ion-icon name="home"></ion-icon>
+        </ion-tab-button>
+        <ion-tab-button tab="favorite">
+          <ion-label>Favorite</ion-label>
+          <ion-icon name="heart"></ion-icon>
+        </ion-tab-button>
+        <ion-tab-button tab="post">
+          <ion-label>New Post</ion-label>
+          <ion-icon name="add-circle"></ion-icon>
+        </ion-tab-button>
+        <ion-tab-button tab="profile">
+          <ion-label>Profile</ion-label>
+          <ion-icon name="person"></ion-icon>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
 </ion-app>
