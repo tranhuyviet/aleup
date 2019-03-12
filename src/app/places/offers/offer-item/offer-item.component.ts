@@ -47,6 +47,9 @@ export class OfferItemComponent implements OnInit {
       case 50:
         this.tagUrl = '../../../../assets/images/tag50.png';
         break;
+      case 100:
+        this.tagUrl = '../../../../assets/images/tagfree.png';
+        break;
       default:
         this.tagUrl = '../../../../assets/images/tag1.png';
     }

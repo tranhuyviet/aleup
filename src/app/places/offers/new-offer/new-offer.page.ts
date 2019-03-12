@@ -35,11 +35,11 @@ export class NewOfferPage implements OnInit {
       }),
       price: new FormControl(null, {
         updateOn: 'blur',
-        validators: [Validators.required, Validators.min(1)]
+        validators: [Validators.required, Validators.min(0.1)]
       }),
       discount: new FormControl(null, {
         updateOn: 'blur',
-        validators: [Validators.required, Validators.min(1)]
+        validators: [Validators.required, Validators.min(1), Validators.max(100)]
       }),
       market: new FormControl(null, {
         updateOn: 'blur',
