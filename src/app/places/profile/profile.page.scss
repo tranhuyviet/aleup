@@ -16,3 +16,64 @@ p.header {
     padding: 20px 0px 10px 25px;
     display: inline-block;
 }
+.avatar {
+    width: 250px;
+    height: 250px;
+    border-radius: 25px;
+    background: url('../../../assets/images/logo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.user-info {
+    width: 90%;
+    font-size: var(--aleup-font-size-h2);
+    color: var(--aleup-color-purple);
+    font-weight: bold;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    .info-wrapper {
+        width: 100%;
+        font-size: 16px;
+        font-weight: normal;
+        text-align: left;
+        box-sizing: border-box;
+        padding-left: 25px;
+        background: var(--aleup-color-grey);
+        box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.065);
+        margin-top: 20px;
+        div {
+            padding: 20px 0;
+        }
+    }
+}
+.change-password {
+    width: 100%;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+    button {
+        width: 90%;
+        height: 55px;
+        color: var(--aleup-color-purple);
+        background: var(--aleup-color-grey);
+        box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.065);
+        border-radius: 5px;
+        font-size: 16px;
+        font-weight: 600;
+        display: inline-block;
+        margin: auto;
+        text-align: left;
+        box-sizing: border-box;
+        padding-left: 25px;
+    }
+}

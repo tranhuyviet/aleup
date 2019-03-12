@@ -13,6 +13,10 @@
       <input placeholder="Enter Password" type="password" ngModel name="password" required minlength="6" #passwordCtrl="ngModel">
     </div>
     <p class="notify" *ngIf="!passwordCtrl.valid && passwordCtrl.touched">Password should be at least 6 characters long</p>
+    <div class="input-wrapper" *ngIf="!isLogin">
+        <img class="input-icon" src="../../assets/icon/access-key.svg"/>
+        <input placeholder="Confirm Password" type="password" ngModel name="cpassword" required minlength="6">
+      </div>
     <ion-button type="submit" expand="block">{{ isLogin ? 'Login' : 'Sign up' }}</ion-button>
     <p class="question" *ngIf="isLogin">Not a member yet?</p>
     <ion-button class="register" type="button" fill="clear" expand="block" (click)="onSwitchAuthMode()">{{ isLogin ? 'Register' : 'Login' }}</ion-button>
