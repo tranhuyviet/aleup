@@ -1,18 +1,18 @@
-ion-header {
-    p {
-        position: relative;
-        color: var(--aleup-color-purple);
-        font-size: var(--aleup-font-size-h1);
-        font-weight: 600;
-        margin: 0;
-        padding: 40px 0px 10px 25px;
-        display: inline-block;
-    }
-    ion-icon {
-        float: right;
-        font-size: 40px;
-        color: var(--aleup-color-purple);
-        padding: 45px 25px 10px 0px;
-    }
-
+ion-icon {
+    float: right;
+    font-size: 40px;
+    color: var(--aleup-color-purple);
+    padding: 25px 25px 10px 0px;
+}
+ion-header::after {
+    height: 0px!important;
+}
+p.header {
+    position: relative;
+    color: var(--aleup-color-purple);
+    font-size: var(--aleup-font-size-h1);
+    font-weight: 600;
+    margin: 0;
+    padding: 20px 0px 10px 25px;
+    display: inline-block;
 }

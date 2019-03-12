@@ -1,12 +1,10 @@
 <ion-header>
-  <!-- <ion-buttons slot="end">
-    <ion-menu-button></ion-menu-button>
-  </ion-buttons> -->
-  <p>Hot Deal</p>
+  <p class="header">Hot Deal</p>
 </ion-header>
 
 <ion-content>
-  <ion-searchbar (search)="onSearch($event)" animated placeholder="Search for food, clothes, market,..."></ion-searchbar>
+ 
+  <ion-input (change)="onSearch($event)" placeholder="Search for food, clothes, market,..."><ion-icon name="search" size="small"></ion-icon></ion-input>
   <div *ngIf="isLoading" text-center>
     <ion-spinner color="primary"></ion-spinner>
   </div>

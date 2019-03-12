@@ -50,6 +50,7 @@ ion-content {
         margin-top: 20px;
         --background-activated: rgb(8, 25, 31);
         --color-activated: rgb(8, 25, 31);
+        --box-shadow: none;
         &.register {
             --color: var(--aleup-color-purple);
             --background: none;

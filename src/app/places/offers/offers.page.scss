@@ -7,6 +7,9 @@ ion-header p {
     padding: 40px 0px 10px 25px;
     display: inline-block;
 }
+ion-header::after {
+    height: 0px!important;
+}
 ion-icon.add-offer {
     position: absolute;
     top: 45%;

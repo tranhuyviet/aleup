@@ -1,0 +1,15 @@
+p.header {
+    color: var(--aleup-color-purple);
+    font-size: var(--aleup-font-size-h1);
+    font-weight: 600;
+    margin: 0;
+    padding: 10px 0px 10px 25px;
+}
+ion-header::after {
+    height: 0px!important;
+}
+ion-back-button {
+    --icon-font-size: 40px;
+    color: var(--aleup-color-purple);
+    margin-top: 20px;
+}

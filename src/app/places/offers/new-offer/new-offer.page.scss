@@ -1,11 +1,4 @@
 ion-header {
-    p {
-        color: var(--aleup-color-purple);
-        font-size: var(--aleup-font-size-h1);
-        font-weight: 600;
-        margin: 0;
-        padding: 20px 0px 20px 25px;
-    }
     button {
         background: none;
         font-size: 16px;
@@ -16,9 +9,19 @@ ion-header {
     ion-back-button {
         display: inline-block;
         --color: var(--aleup-color-purple);
-        padding: 20px 0 20px 20px;
-        font-size: 20px;
+        padding: 20px 0 20px 0px;
+        --icon-font-size: 40px;
     }
+}
+ion-header::after {
+    height: 0px!important;
+}
+p.header {
+    color: var(--aleup-color-purple);
+    font-size: var(--aleup-font-size-h1);
+    font-weight: 600;
+    margin: 0;
+    padding: 20px 0px 20px 25px;
 }
 ion-item-group {
     width: 90%;

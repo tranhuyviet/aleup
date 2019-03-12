@@ -1,19 +1,26 @@
-ion-header p {
+ion-header::after {
+    height: 0px!important;
+}
+p.header {
     color: var(--aleup-color-purple);
     font-size: var(--aleup-font-size-h1);
     font-weight: 600;
     margin: 0;
     padding: 40px 0px 10px 25px;
 }
-ion-searchbar {
-    --background: var(--aleup-color-grey);
-    --icon-color: var(--aleup-color-purple);
-    --color: var(--aleup-color-purple);
-    --clear-button-color: var(--aleup-color-red);
-    width: 95%;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-bottom: 20px;
+ion-input {
+    height: 40px;
+    width: 90%;
+    position: relative;
+    background: var(--aleup-color-grey);
+    border-radius: 10px;
+    margin: 20px auto;
+    box-sizing: border-box;
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.065);
+    ion-icon {
+        color: var(--aleup-color-purple);
+        margin-left: 20px;
+    }
 }
 .not-found {
     img {

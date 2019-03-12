@@ -1,9 +1,12 @@
-ion-header p {
+p.header {
     color: var(--aleup-color-purple);
     font-size: var(--aleup-font-size-h1);
     font-weight: 600;
     margin: 0;
     padding: 40px 0px 10px 25px;
+}
+ion-header::after {
+    height: 0px!important;
 }
 .favorite {
     margin-top: 50px;
