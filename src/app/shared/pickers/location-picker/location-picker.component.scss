@@ -1,13 +1,28 @@
 .picker {
-  width: 30rem;
-  max-width: 80%;
+  width: 90%;
+  max-width: 90%;
   height: 20rem;
   max-height: 30vh;
-  border: 1px solid var(--ion-color-primary);
+  background: var(--aleup-color-grey);
+  border-radius: 25px;
   margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.065);
+  margin-bottom: 20px;
+  ion-icon {
+    font-size: 50px;
+    color: var(--aleup-color-purple);
+  }
+  ion-button {
+    --background: none;
+    font-size: 16px;
+    font-weight: bold;
+    --color: var(--aleup-color-purple);
+    --background-activated: none;
+    --color-activated: rgb(8, 25, 31);
+  }
 }
 
 .location-image {

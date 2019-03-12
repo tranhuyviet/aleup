@@ -1,0 +1,53 @@
+ion-header {
+    p {
+        color: var(--aleup-color-purple);
+        font-size: var(--aleup-font-size-h1);
+        font-weight: 600;
+        margin: 0;
+        padding: 20px 0px 20px 25px;
+    }
+    button {
+        background: none;
+        font-size: 16px;
+        float: right;
+        font-weight: bold;
+        margin: 30px 15px 0 0;
+    }
+    ion-back-button {
+        display: inline-block;
+        --color: var(--aleup-color-purple);
+        padding: 20px 0 20px 20px;
+        font-size: 20px;
+    }
+}
+ion-item-group {
+    width: 90%;
+    margin: auto;
+    padding-top: 5px;
+    padding-bottom: 20px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    background: var(--aleup-color-grey);
+    border-radius: 25px;
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.065);
+}
+ion-item {
+    margin: auto;
+    margin-top: 15px;
+    width: 90%;
+    --background: transparent;
+    border-bottom: 1px solid rgb(221, 221, 221);
+    ion-input {
+        border: none;
+        box-shadow: none;
+        --color: var(--aleup-color-purple);
+    }
+    ion-textarea, ion-datetime {
+        --color: var(--aleup-color-purple);
+    }
+    ion-label {
+        --color: var(--aleup-color-purple);
+        font-weight: 600;
+        font-size: 14px;
+    }
+}

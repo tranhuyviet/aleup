@@ -1,31 +1,167 @@
-// h1 {
-//   font-size: 18px;
-//   border: 1px solid var(--ion-color-primary);
-//   padding: 8px;
-//   border-radius: 5px;
-//   color: var(--ion-color-primary);
-// }
-
-// .offer-details {
-//   display: flex;
-//   align-items: center;
-
-//   .space-left {
-//     margin-left: 5px;
-//   }
-// }
-
-.discount {
-  background-color: red;
-  width: 50px;
-  height: 50px;
-  border-radius: 30px;
-  text-align: center;
-  // align-items: center;
-  color: white;
-  font-size: 18px;
+.card {
+  &-wrapper {
+    position: relative;
+    width: 90%;
+    min-height: 400px;
+    background: var(--aleup-color-grey);
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.065);
+    border-radius: 25px;
+    left: 50%;
+    transform: translateX(-51%);
+    margin-bottom: 15px;
+    overflow: auto;
+    animation: slide-up .7s forwards;
+    transition: .4s;
+  }
+  &-image {
+    position: absolute;
+    width: 85%;
+    height: 200px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.25);
+    background: url('https://images.pexels.com/photos/277253/pexels-photo-277253.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%,0%);
+  }
+  &-container {
+    position: absolute;
+    width: 85%;
+    height: 140px;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+  &-title {
+    position: absolute;
+    top: 0;
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--aleup-color-purple);
+  }
+  &-price {
+    padding-top: 40px;
+    .product-price {
+      color: var(--aleup-color-red);
+      font-size: var(--aleup-font-size-h1);
+      font-weight: bold;
+      span {
+        font-size: var(--aleup-font-size-h4);
+      }
+    }
+  }
+  &-social {
+    position: absolute;
+    top: 45px;
+    right: 0;
+    width: 50%;
+    text-align: right;
+    ion-icon {
+      display: inline-block;
+      padding: 8px;
+      font-size: 25px;
+      margin-left: 15px;
+      border: 1px solid var(--aleup-color-purple);
+      border-radius: 50%;
+      &[name="heart"] {
+        color: #ffffff;
+        border: 1px solid rgb(185, 184, 176);
+      }
+    }
+  }
+  &-market, &-detail-text {
+    position: absolute;
+    font-size: var(--aleup-font-size-h5);
+    font-style: italic;
+    font-weight: 600;
+    bottom: 0px;
+    color: var(--aleup-color-purple);
+  }
+  &-market {
+    width: 60%;
+  }
+  &-detail-text {
+    font-size: var(--aleup-font-size-text);
+    text-align: left;
+    font-style: normal;
+    ion-icon {
+      margin-left: 5px;
+    }
+    position: absolute;
+    right: 0;
+  }
+  &-badge-discount {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    background: url('../../../../assets/images/tag10.png') no-repeat center center / cover;
+  }
+  &-more-detail {
+    color: var(--aleup-color-purple);
+    font-size: var(--aleup-font-size-text);
+    margin: 10px 0 15px 0;
+  }
+  &-validation, &-address, &-map, &-discount {
+    margin-top: 10px;
+  }
+  &-map {
+    background: url('../../../../assets/images/map.png') no-repeat center center / cover;
+    width: 100%;
+    height: 160px;
+    border-radius: 5px;
+  }
+  &-less-detail-text {
+    font-size: var(--aleup-font-size-text);
+    text-align: right;
+    font-weight: 600;
+    margin-top: 15px;
+    ion-icon {
+      margin-left: 5px;
+    }
+  }
 }
-
-.discount p {
-  padding-top: 10px;
+.favorite {
+  border: 1px solid rgb(185, 184, 176);
+}
+.favoriteClicked {
+  border: none;
+  background-color: var(--aleup-color-red);
+  animation: pulse .3s forwards;
+  ion-icon[name="heart"] {
+    color: #ffffff!important;
+  }
+}
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.2);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translate(-51%, 20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-51%);
+  }
 }

@@ -16,30 +16,44 @@ export class DiscoverPage implements OnInit, OnDestroy {
   offers: Place[];
   isLoading = false;
   private placesSub: Subscription;
-
+  private tempOffer: Place[];
+  private searchedOffer: Place[];
   constructor(
     private placesService: PlacesService,
-    // private menuCtrl: MenuController,
-    // private authService: AuthService
   ) {}
 
   ngOnInit() {
     this.placesSub = this.placesService.places.subscribe(places => {
       this.offers = places;
+      this.tempOffer = [...places];
     });
   }
 
   ionViewWillEnter() {
+    this.fetchPlace();
+  }
+
+  public fetchPlace() {
     this.isLoading = true;
     this.placesService.fetchPlaces().subscribe(data => {
-      // console.log(data);
       this.isLoading = false;
     });
   }
 
-  // onOpenMenu() {
-  //   this.menuCtrl.toggle();
-  // }
+  onSearch(event) {
+    this.offers = this.tempOffer;
+    this.searchedOffer = this.offers.filter(f => {
+      const searchTitle = f.title.toLowerCase().search(event.target.value);
+      const searchMarket = f.market.toLowerCase().search(event.target.value);
+      const searchAdress = f.location.address.toLowerCase().search(event.target.value);
+      if (searchTitle !== -1 || searchMarket !== -1 || searchAdress !== -1) {
+        return true;
+      } else {
+        return false;
+      }
+    });
+    this.offers = this.searchedOffer;
+  }
 
   ngOnDestroy() {
     if (this.placesSub) {

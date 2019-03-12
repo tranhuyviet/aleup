@@ -1,0 +1,82 @@
+ion-content {
+    --background: url(../../assets/images/background.jpg) no-repeat center center / cover;
+    .aleup-logo {
+        width: 50%;
+        margin-bottom: 50px;
+        text-align: center;
+        display: inline-block;
+    }
+    .input-wrapper {
+        margin-bottom: 15px;
+        position: relative;
+        input {
+            height: 60px;
+            border-radius: 10px;
+            background: white;
+            outline: none;
+            border: none;
+            width: 100%;
+            box-sizing: border-box;
+            padding-left: 65px;
+        }
+        .input-icon {
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+    form {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -60%);
+        width: 90%;
+        text-align: center;
+        animation: slide-up .7s forwards;
+    }
+    ion-button {
+        width: 220px;
+        height: 50px;
+        --background: var(--aleup-color-purple);
+        display: inline-block;
+        --color: #ffffff;
+        --opacity: 1;
+        --border-radius: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: 20px;
+        --background-activated: rgb(8, 25, 31);
+        --color-activated: rgb(8, 25, 31);
+        &.register {
+            --color: var(--aleup-color-purple);
+            --background: none;
+            --background-activated: none;
+            --padding-top: 0;
+            margin-top: 0;
+        }
+    }
+    p {
+        color: var(--aleup-color-red);
+        &.notify {
+            text-align: left;
+            margin-top: -10px;
+            font-size: 14px;
+        }
+        &.question {
+            text-align: center;
+        }
+    }
+}
+@keyframes slide-up {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -30%);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -60%);
+    }
+}

@@ -1,10 +1,5 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title text-center>My Favorites</ion-title>
-  </ion-toolbar>
+  <p>Favorite</p>
 </ion-header>
 
 <ion-content>
@@ -14,8 +9,9 @@
         <div *ngIf="isLoading" text-center>
           <ion-spinner color="primary"></ion-spinner>
         </div>
-        <div text-center *ngIf="!isLoading && offers.length <= 0">
-          <p>Have no any favorite!</p>
+        <div class="favorite" text-center *ngIf="!isLoading && offers.length <= 0">
+          <p>You don't have any favorite item</p>
+          <img src="../../../assets/images/favorite.png" alt="">
         </div>
         <ion-list *ngIf="!isLoading && offers.length > 0" lines="none">
           <ion-item-sliding *ngFor="let offer of offers" #slidingItem>

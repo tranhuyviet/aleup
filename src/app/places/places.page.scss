@@ -1,0 +1,9 @@
+ion-tab-bar {
+    --background: #ffffff;
+    --border: none;
+    box-shadow: 0px -5px 15px 0px rgba(0, 0, 0, 0.065);
+    ion-tab-button {
+        --color: #bebebe;
+        --color-selected: var(--aleup-color-purple);
+    }
+}

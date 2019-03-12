@@ -3,6 +3,7 @@
 
 /** Ionic CSS Variables **/
 :root {
+
   /** primary **/
   --ion-color-primary: #3880ff;
   --ion-color-primary-rgb: 56, 128, 255;
@@ -74,4 +75,18 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+  /** aleup color **/
+  --aleup-color-purple: #0E3746;
+  --aleup-color-cream: #EAE8DC;
+  --aleup-color-grey: #f4f2ec;
+  --aleup-color-red: #BE2623;
+
+  /** aleup font size **/
+  --aleup-font-size-h1: 40px;
+  --aleup-font-size-h2: 30px;
+  --aleup-font-size-h3: 22px;
+  --aleup-font-size-h4: 20px;
+  --aleup-font-size-h5: 16px;
+  --aleup-font-size-text: 14px;
 }

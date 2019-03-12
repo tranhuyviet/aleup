@@ -18,6 +18,7 @@ export class OfferItemComponent implements OnInit {
   dateFrom: string;
   dateTo: string;
   userId: string;
+  tagUrl: String;
   isFav = false;
 
   constructor(private placesService: PlacesService, private authService: AuthService, private loadingCtrl: LoadingController) {}
@@ -33,6 +34,22 @@ export class OfferItemComponent implements OnInit {
         this.isFav = true;
       }
     }
+    switch(this.offer.discount) {
+      case 10:
+        this.tagUrl = '../../../../assets/images/tag10.png';
+        break;
+      case 20:
+        this.tagUrl = '../../../../assets/images/tag20.png';
+        break;
+      case 30:
+        this.tagUrl = '../../../../assets/images/tag30.png';
+        break;
+      case 50:
+        this.tagUrl = '../../../../assets/images/tag50.png';
+        break;
+      default:
+        this.tagUrl = '../../../../assets/images/tag1.png';
+    }
 
 
     this.dateFrom = new Date(this.offer.availableFrom).toLocaleString().slice(0, 10);
@@ -40,14 +57,6 @@ export class OfferItemComponent implements OnInit {
   }
 
   addFavorite(placeId: string) {
-    // this.loadingCtrl.create({
-    //   message: 'Updating Favorite...'
-    // }).then(loadingEl => {
-    //   loadingEl.present();
-    //   this.placesService.addFavorite(placeId).subscribe(() => {
-    //     loadingEl.dismiss();
-    //   });
-    // });
     this.placesService.addFavorite(placeId).subscribe();
   }
 

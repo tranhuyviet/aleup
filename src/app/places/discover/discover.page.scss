@@ -1,0 +1,39 @@
+ion-header p {
+    color: var(--aleup-color-purple);
+    font-size: var(--aleup-font-size-h1);
+    font-weight: 600;
+    margin: 0;
+    padding: 40px 0px 10px 25px;
+}
+ion-searchbar {
+    --background: var(--aleup-color-grey);
+    --icon-color: var(--aleup-color-purple);
+    --color: var(--aleup-color-purple);
+    --clear-button-color: var(--aleup-color-red);
+    width: 95%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 20px;
+}
+.not-found {
+    img {
+        width: 40%;
+        display: block;
+        margin: auto;
+    }
+    p {
+        color: var(--aleup-color-purple);
+        font-size: 16px;
+        color: #b7b7b7;
+        margin: 20px 0;
+        font-weight: 600;
+    }
+}
+ion-button {
+    --background: var(--aleup-color-purple);
+    --border-radius: 10px;
+    width: 220px;
+    font-weight: bold;
+    font-size: 16px;
+    --background-activated: #141522;
+}
