@@ -53,8 +53,6 @@ export class AuthPage implements OnInit {
               message = 'E-Mail address could not be found.';
             } else if (code === 'INVALID_PASSWORD') {
               message = 'This password is not correct.';
-            } else if (password !== c_password) {
-              message = 'Confirm password does not match.'
             }
             this.showAlert(message);
           }
@@ -73,6 +71,17 @@ export class AuthPage implements OnInit {
     const email = form.value.email;
     const password = form.value.password;
     const c_password = form.value.cpassword;
+    if(!this.isLogin) {
+      if(password !== c_password) {
+        this.alertCtrl.create({
+          header: 'Confirm password',
+          message: 'Confirm password does not match',
+          buttons: ['Okay'] 
+        }).then(alertEL => alertEL.present());
+        return;
+      }
+    }
+    
     console.log(c_password);
 
     this.authenticate(email, password, c_password);
